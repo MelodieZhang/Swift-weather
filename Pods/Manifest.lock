@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (3.2.0)
+  - AlamofireObjectMapper (2.1.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - ObjectMapper (1.1.2)
+  - SMIconLabel (0.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - AlamofireObjectMapper (~> 2.1)
+  - ObjectMapper (~> 1.1)
+  - SMIconLabel
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  AlamofireObjectMapper: 82391c31f23e37bdb2660da174bcf81b202da39d
+  ObjectMapper: 148765647481443b1a18983b4ac8ec3189cbce35
+  SMIconLabel: aa8e3123ca46c0fd9050d7d70fd10bc1410a4b47
+
+COCOAPODS: 0.39.0
