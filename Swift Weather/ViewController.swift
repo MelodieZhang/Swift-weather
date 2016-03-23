@@ -33,9 +33,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var humidityPercent: UILabel!
 
+    @IBOutlet weak var locationToImageConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topLabelToTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // change layout constraints
+        // if screen is iphone6 or bigger, add extra top space
+        let size = UIScreen.mainScreen().bounds.size
+        if size.height > 1136/2.0 {
+            self.topLabelToTopConstraint.constant = 36
+            self.locationToImageConstraint.constant = 44
+        }
+
+
         
         locationManager.delegate = self
         
@@ -58,7 +70,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print(location.coordinate.longitude)
             
             self.updateWeatherInfo(location.coordinate.latitude, longtitude: location.coordinate.longitude)
-            
+
             locationManager.stopUpdatingLocation()
         }
     }
@@ -122,35 +134,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     
     func updateWeatherIcon(weatherId: Int) {
+        var imageName:String
         switch weatherId {
         case 200..<300:
-            self.icon.image = UIImage(named: "thunderstorm")
+            imageName = "thunderstorm"
         case 300..<400:
-            self.icon.image = UIImage(named: "drizzle")
+            imageName = "drizzle"
         case 500..<600:
-            self.icon.image = UIImage(named:"rainy")
+            imageName = "rainy"
         case 700..<800:
-            self.icon.image = UIImage(named: "snowy")
+            imageName = "snowy"
         case 800:
-            self.icon.image = UIImage(named: "sunny")
+            imageName = "sunny"
         case 801..<805:
-            self.icon.image = UIImage(named: "cloudy")
+            imageName = "cloudy"
         default:
-            self.icon.image = UIImage(named: "default")
+            imageName = "default"
             break
         }
+        self.icon.image = UIImage(named: imageName)
     }
     
     //时间戳 时间转换
-    func changeUTCtoDate(UTCString:Int) -> NSString{
-        let sunStr = NSString(format: "%d", UTCString)
-        let timer:NSTimeInterval = sunStr.doubleValue
-        let data = NSDate(timeIntervalSince1970: timer)
-        
+    func changeUTCtoDate(timeStamp:Int) -> String{
+        let date = NSDate(timeIntervalSince1970: Double(timeStamp))
+
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         formatter.dateFormat = "HH:mm"
-        let str:NSString = formatter.stringFromDate(data)
+        let str = formatter.stringFromDate(date)
         return str
     }
     
