@@ -33,6 +33,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var humidityPercent: UILabel!
 
+    @IBOutlet weak var locationToImageConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topLabelToTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +60,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print(location.coordinate.longitude)
             
             self.updateWeatherInfo(location.coordinate.latitude, longtitude: location.coordinate.longitude)
-            
+
             locationManager.stopUpdatingLocation()
         }
     }
