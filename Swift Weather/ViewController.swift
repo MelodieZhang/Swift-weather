@@ -38,6 +38,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // change layout constraints
+        // if screen is iphone6 or bigger, add extra top space
+        let size = UIScreen.mainScreen().bounds.size
+        if size.height > 1136/2.0 {
+            self.topLabelToTopConstraint.constant = 36
+            self.locationToImageConstraint.constant = 44
+        }
+
+
         
         locationManager.delegate = self
         

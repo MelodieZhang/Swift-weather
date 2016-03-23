@@ -233,7 +233,7 @@
                             <constraint firstAttribute="bottom" secondItem="30F-Kj-Bab" secondAttribute="bottom" constant="20" symbolic="YES" id="Byv-zO-i4Q"/>
                             <constraint firstItem="30F-Kj-Bab" firstAttribute="top" secondItem="eFx-YO-m4E" secondAttribute="bottom" constant="29" id="EpQ-jF-n6b"/>
                             <constraint firstItem="30F-Kj-Bab" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IRK-YK-MBA" secondAttribute="bottom" constant="3.5" id="FNz-qj-e2m">
-                                <variation key="widthClass=compact" constant="40"/>
+                                <variation key="widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="30F-Kj-Bab" firstAttribute="centerX" secondItem="eFx-YO-m4E" secondAttribute="centerX" id="V2g-es-SEx"/>
                             <constraint firstItem="eFx-YO-m4E" firstAttribute="centerX" secondItem="enJ-Y9-aWB" secondAttribute="centerX" id="YZ0-HX-neV"/>
@@ -242,7 +242,7 @@
                             <constraint firstItem="30F-Kj-Bab" firstAttribute="top" secondItem="enJ-Y9-aWB" secondAttribute="top" constant="452" id="eFA-cb-SCw"/>
                             <constraint firstItem="FVp-KB-0zT" firstAttribute="top" secondItem="x8D-re-juR" secondAttribute="bottom" constant="10" id="giD-p7-6dQ"/>
                             <constraint firstItem="30F-Kj-Bab" firstAttribute="centerY" secondItem="enJ-Y9-aWB" secondAttribute="centerY" multiplier="1.6" priority="250" id="jSz-w0-vUr"/>
-                            <constraint firstItem="ZE0-FX-4Qj" firstAttribute="top" secondItem="FVp-KB-0zT" secondAttribute="bottom" constant="44" id="lZJ-Ms-cHc"/>
+                            <constraint firstItem="ZE0-FX-4Qj" firstAttribute="top" secondItem="FVp-KB-0zT" secondAttribute="bottom" constant="24" id="lZJ-Ms-cHc"/>
                             <constraint firstItem="ZE0-FX-4Qj" firstAttribute="centerX" secondItem="enJ-Y9-aWB" secondAttribute="centerX" id="mRH-9B-RaC"/>
                             <constraint firstItem="IRK-YK-MBA" firstAttribute="centerX" secondItem="enJ-Y9-aWB" secondAttribute="centerX" id="nyI-z9-mpX"/>
                             <constraint firstItem="eFx-YO-m4E" firstAttribute="top" secondItem="IRK-YK-MBA" secondAttribute="bottom" constant="3.5" id="oXi-yG-yGM"/>
